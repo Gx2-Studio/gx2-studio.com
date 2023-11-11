@@ -1,12 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
-import logo from "/public/logo.svg";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/landing/Hero.astro";
+import Services from "../components/landing/Services.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Footer from "../components/landing/Footer.astro";
 ---
 
-<Layout title="Gx2 Studio">
-	<main class="flex justify-center items-center flex-col p-12">
-		<Image src={logo} alt="descriptive text" />
-		<p class="font-mono">WIP</p>
-	</main>
-</Layout>
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="Gx2 Studio"
+  description="Software dev. & product consultancy"
+  canonical="https://gx2-studio.com/"
+  openGraph={{
+    url: "https://gx2-studio.com/",
+    title: "Gx2 Studio",
+    description: "Software dev. & product consultancy",
+    site_name: "Gx2 Studio",
+  }}
+/>
+<BaseLayout>
+  <Hero />
+  <Services />
+  <Footer />
+</BaseLayout>
