@@ -1,5 +1,4 @@
 ---
-import { features } from "../../data/features.json";
 ---
 
 <section class="bg-primary">
@@ -17,19 +16,13 @@ import { features } from "../../data/features.json";
     <ul
       class="mx-auto flex flex-col lg:flex-row text-left gap-3 items-start text-secondary mt-3"
     >
-      {
-        features.map((template) => (
-          <>
-            <li class="flow-root col-span-full h-full ">
-              <a href={template.url}>
-                <div>
-                  <p class="italic shrink-0 text-xs ">{template.title}</p>
-                </div>
-              </a>
-            </li>
-          </>
-        ))
-      }
+      <li class="flow-root col-span-full h-full">
+        <a href="">
+          <div>
+            <p class="italic shrink-0 text-xs">Legal notice</p>
+          </div>
+        </a>
+      </li>
     </ul>
   </div>
 </section>
